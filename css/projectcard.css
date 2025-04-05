@@ -1,0 +1,158 @@
+/* Dark Mode Background
+    Interfering w the user css body because im fetching it */
+/* body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+} */
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+  }
+
+dialog {
+    /* position: relative; */
+    left: 45vh;
+    top: 25vh;
+    border: none;
+    border-radius: 14px;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+/* Modal content */
+.modal-content {
+    padding: 10px;
+}
+
+.modal-content h2{
+    margin-bottom: 15px;
+}
+
+button {
+      background: #ff4757;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 8px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s ease-in-out;
+      margin-bottom: 5px;
+    }
+  
+button:hover {
+      background: #e84148;
+} 
+
+.closepopup{
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+
+
+
+.project-card {
+    position: relative ;
+    display: flex;
+    max-height: 100%;
+    flex-direction: column;
+    /* border: 3px solid #fff; */
+    border-radius: 12px;
+    background-color: #2a2a2a;
+    gap: 10px;
+}
+
+.project-top{
+    flex:7;
+    display: flex;
+    padding-bottom: 7%;
+}
+/* Project Info on the Left */
+.project-info {
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    flex: 1;
+    justify-items: left;
+}
+
+.project-info p{
+    padding: 10px;
+}
+
+/* App Name */
+.app-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Screenshot Box */
+.project-screenshot {
+    
+    width: 50%;
+    height: 20%;
+    margin-top: 2%;
+    margin-right: 2%;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    background-color: #2a2a2a;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.project-screenshot img {
+    padding: 5px;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Collaborators Section */
+.project-collaborators {
+    flex: 3;
+    display: flex;
+    border-top: 2px solid #fff;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 3%; /*Adjust distance from the bottom*/
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.project-collaborators a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    color: #b01173;
+    margin-top: 10px;
+    padding: 5px;
+}

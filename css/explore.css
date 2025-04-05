@@ -1,0 +1,542 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    overflow: hidden;
+    /* gap: 10%;      */
+
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.econtainer {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-self: center;
+    /* gap: 13%; */
+    background-color: #b01173;
+}
+
+.main-content {
+    justify-self: center;
+    justify-content: center;
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #121212;
+    max-width: 100%;
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #b01173 #1e1e1e;
+}
+
+/* .main-content::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #b01173;
+    border-radius: 20px;
+} */
+
+
+.left-sidebar {
+    width: 15%;
+    background-color: #121212;
+    padding: 20px;
+    border-right: 1px solid #2a2a2a;
+    justify-self: left;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+/* homepage */
+.logo { 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* LEFT SIDEBAR Navigation menu */
+.nav-menu {
+    margin-top: 30px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.nav-menu a.active {
+    color:#b01173; /* Color for the active nav-item */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #2a2a2a;
+}
+
+.nav-item.active {
+    background-color: #2a2a2a;
+    font-weight: bold;
+    color: #b01173;
+}
+
+.nav-item i {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+/* left side explore page */
+.filters{
+    flex: 1;
+    background-color: #121212;
+    border-right: solid #2a2a2a ;
+}
+
+/* filter header thingy */
+.fheader{
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 5%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    border: solid #b01173;
+    /* border-color: #b01173; */
+    color: #be3b8b;
+    font-size: larger;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+.filter-list{
+    margin-left: 5%;
+    margin-top: 5%;
+    gap: 5%;
+}
+
+.filter-item{
+    padding: 20px;
+    position: relative; /* Ensure dropdown aligns properly */
+    overflow: visible;
+}
+
+.filter-item p{
+    font-size:large;
+    padding: 5px;
+}
+
+.filter-item input{
+    width: 95%;
+    z-index: 50;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Selected Items Display */
+.selected-items {
+    margin-top: 10px;
+    padding: 10px;
+    background: #3a3a3a;
+    border-radius: 5px;
+    min-height: 30px;
+    margin-right: 5%;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* Button Styling */
+.dropdown-btn {
+    background-color: #b01173;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+
+
+
+
+
+/* Dropdown Content */
+.dropdown-content {
+    z-index: 100;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: #4a4a4a;
+    width: 180% ;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field */
+.dropdown-input {
+    font-size: 12px;
+    background-color: #999;
+    width: 100%;
+    padding: 6px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Improve checkbox alignment with text */
+.dropdown-content label {
+    display: flex;
+    justify-content: left;
+    align-items: center; /* This aligns items vertically centered */
+    padding: 6px;
+    cursor: pointer;
+}
+
+.dropdown-content input[type="checkbox"] {
+    position: absolute;
+    left:5px;
+     /* margin-right: 8px; */
+    /*Reset any default styling that might affect vertical alignment */
+    vertical-align: middle; 
+}
+
+
+/* Ensure the label text is properly aligned */
+.dropdown-content label span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dropdown-content label:hover {
+    background-color: #be3b8b;
+}
+
+/* Show Dropdown */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* right side explore page */
+.not-filters{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+}
+
+
+.search-container{
+    flex: 1;
+    justify-self: center;
+    justify-items: center;
+    margin-top: 3%;
+    border-bottom: solid #3a3a3a;
+}
+
+.s{
+    position: relative;
+    height: 45px;
+    width: 70%;
+
+}
+
+.s input{
+    width: 100%;
+    /* z-index: 50; */
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px; 
+    color: #fff;
+    font-size: 20px;
+}
+
+.s i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.results{
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+}
+
+.results::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.results::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    
+}
+
+.results::-webkit-scrollbar-thumb {
+    background-color: #b01173;
+    border-radius: 20px;
+}
+
+
+
+.actual-results{
+    display:flex;
+    flex: 3;
+}
+
+.actual-results div{
+    flex:1;
+    color: #121212;
+}
+
+
+.random-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Add this to align items vertically */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.rheader {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    border: solid #b01173;
+    color: #be3b8b;
+    font-size: larger;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+
+/* Toggle Button */
+.toggle-container {
+    margin-left: 17.5%;
+    margin-right: 20%; /* This pushes the search button to the right */
+}
+
+.toggle-button {
+    background: #222;
+    border-radius: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-option {
+    flex: 1;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: bold;
+    color: #bbb;
+    z-index: 2;
+}
+
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #b01173;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.sbuttonw {
+    margin-left: 20px;
+}
+
+.searchb {
+    color: #fff;
+    font-size: larger;
+    background-color: #b01173;
+    padding: 8px 15px;
+    border: solid #b01173;
+    border-radius: 30px;
+}
+
+.searchb:hover {
+    background-color: #d81b8c;
+}
+
+
+
+.goatjo{
+    background-color: aquamarine;
+    justify-content: center;
+}
+.goatjo p{
+    margin-bottom: 5%;
+    font-weight: bolder;
+    justify-self: center;
+}
+
+.fraudkuna{
+    background-color: darkred;
+    justify-content: center;
+}
+
+.fraudkuna p{
+    margin-top: 20%;    
+    font-weight: bolder;
+    justify-self: center;
+}
+
+.other{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+

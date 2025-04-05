@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="stylesheet" href="../css/editp.css">
+    <title>User profile</title>
+    
+</head>
+<body>
+
+    <!-- <div id="ih" class=" hdr active">
+            /username/profile/info
+    </div>
+    <div id="ph" class=" hdr">
+            /username/profile/projects
+    </div> -->
+    <div class="toggle-container">
+        <div class="toggle-button" onclick="toggleContent()">
+            <div class="slider"></div>
+            <div class="toggle-option" id="user-info-tab">User Info</div>
+            <div class="toggle-option" id="projects-tab">Projects</div>
+        </div>
+    </div>
+
+    <!-- User Section -->
+    <div id="user-info" class="content active">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-left">
+                    <img src="profile.jpg" alt="User Profile Picture" class="profile-pic">
+                    <div class="user-details">
+                        <h2>John Doe</h2>
+                        <span class="availability">Available</span>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <p>User Since: 2025</p>
+                </div>
+            </div>
+            <!-- Form Section -->
+            <div class="form-container">
+                <!-- Column 1 -->
+                <div class="column">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" placeholder="Enter Age">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="text" placeholder="Enter Gender">
+                    </div>
+                    <div class="form-group">
+                        <label>Contact No</label>
+                        <input type="text" placeholder="Enter Contact Number">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label>Education Details</label>
+                        <textarea placeholder="Enter Education Details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Details</label>
+                        <textarea placeholder="Enter Work Details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Leetcode </label>
+                        <input type="text" placeholder="Enter Account Link">
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="column">
+                    <div class="form-group">
+                        <label>Primary Role</label>
+                        <input type="text" placeholder="Enter Role">
+                    </div>
+                    <div class="form-group">
+                        <label>Domain Expertise</label>
+                        <input type="text" placeholder="Enter Domain Expertise">
+                    </div>
+                    <div class="form-group">
+                        <label>Tech Skills</label>
+                        <textarea placeholder="Enter Technical Skills"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Certifications</label>
+                        <textarea placeholder="Enter Certifications"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Collaboration Preference</label>
+                        <input type="text" placeholder="Enter Preference">
+                    </div>
+                    <div class="form-group">
+                        <label>Github </label>
+                        <input type="text" placeholder="Enter Account Link">
+                    </div>
+                    <div class="form-group">
+                        <label>LinkedIn </label>
+                        <input type="text" placeholder="Enter Account Link">
+                    </div>
+                </div>
+
+            </div>   
+             
+    </div>
+    <!-- Projects Section -->
+    <div id="projects" class="content">
+        <div class="form-contain">
+            <div class="scrollable-content">
+                <div class="section-header">ONGOING PROJECTS</div>
+                
+                <!-- Ongoing Project 1 -->
+                <div class="p-c ongoing">
+                    <h3 class="project-title">Project 1</h3>
+                    <div class="form-group">
+                        <label for="app-name-1">APP NAME</label>
+                        <input type="text" id="app-name-1" name="app-name-1" placeholder="e.g., CODECONNECT">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-1">Date</label>
+                        <input type="month" id="date-1" name="date-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-1">Domains</label>
+                        <input type="text" id="domains-1" name="domains-1" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-1">Tech Stack</label>
+                        <input type="text" id="tech-stack-1" name="tech-stack-1" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ongoing Project 2 -->
+                <div class="p-c ongoing">
+                    <h3 class="project-title">Project 2</h3>
+                    <div class="form-group">
+                        <label for="app-name-2">APP NAME</label>
+                        <input type="text" id="app-name-2" name="app-name-2" placeholder="e.g., STOCK DISTRIBUTION SYSTEM">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-2">Date</label>
+                        <input type="month" id="date-2" name="date-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-2">Domains</label>
+                        <input type="text" id="domains-2" name="domains-2" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-2">Tech Stack</label>
+                        <input type="text" id="tech-stack-2" name="tech-stack-2" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ongoing Project 3 -->
+                <div class="p-c ongoing">
+                    <h3 class="project-title">Project 3</h3>
+                    <div class="form-group">
+                        <label for="app-name-3">APP NAME</label>
+                        <input type="text" id="app-name-3" name="app-name-3" placeholder="e.g., ROCK PAPER SCISSOR BRAWL">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-3">Date</label>
+                        <input type="month" id="date-3" name="date-3">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-3">Domains</label>
+                        <input type="text" id="domains-3" name="domains-3" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-3">Tech Stack</label>
+                        <input type="text" id="tech-stack-3" name="tech-stack-3" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="section-header">FINISHED PROJECTS</div>
+                
+                <!-- Finished Project 1 -->
+                <div class="p- finished">
+                    <h3 class="project-title">Project 4</h3>
+                    <div class="form-group">
+                        <label for="app-name-4">APP NAME</label>
+                        <input type="text" id="app-name-4" name="app-name-4" placeholder="e.g., SOCIAL MEDIA SITE">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-4">Date</label>
+                        <input type="month" id="date-4" name="date-4">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-4">Domains</label>
+                        <input type="text" id="domains-4" name="domains-4" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-4">Tech Stack</label>
+                        <input type="text" id="tech-stack-4" name="tech-stack-4" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Finished Project 2 -->
+                <div class="p-c finished">
+                    <h3 class="project-title">Project 5</h3>
+                    <div class="form-group">
+                        <label for="app-name-5">APP NAME</label>
+                        <input type="text" id="app-name-5" name="app-name-5" placeholder="e.g., AI BRAINTUMOR DETECTION MODEL">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-5">Date</label>
+                        <input type="month" id="date-5" name="date-5">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-5">Domains</label>
+                        <input type="text" id="domains-5" name="domains-5" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-5">Tech Stack</label>
+                        <input type="text" id="tech-stack-5" name="tech-stack-5" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Finished Project 3 -->
+                <div class="p-c finished">
+                    <h3 class="project-title">Project 6</h3>
+                    <div class="form-group">
+                        <label for="app-name-6">APP NAME</label>
+                        <input type="text" id="app-name-6" name="app-name-6" placeholder="e.g., E-COMMERCE SITE">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-6">Date</label>
+                        <input type="month" id="date-6" name="date-6">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-6">Domains</label>
+                        <input type="text" id="domains-6" name="domains-6" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-6">Tech Stack</label>
+                        <input type="text" id="tech-stack-6" name="tech-stack-6" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Finished Project 4 -->
+                <div class="p-c finished">
+                    <h3 class="project-title">Project 7</h3>
+                    <div class="form-group">
+                        <label for="app-name-7">APP NAME</label>
+                        <input type="text" id="app-name-7" name="app-name-7" placeholder="e.g., FOOD DELIVERY SYSTEM">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-7">Date</label>
+                        <input type="month" id="date-7" name="date-7">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-7">Domains</label>
+                        <input type="text" id="domains-7" name="domains-7" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-7">Tech Stack</label>
+                        <input type="text" id="tech-stack-7" name="tech-stack-7" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Finished Project 5 -->
+                <div class="p-c finished">
+                    <h3 class="project-title">Project 8</h3>
+                    <div class="form-group">
+                        <label for="app-name-8">APP NAME</label>
+                        <input type="text" id="app-name-8" name="app-name-8" placeholder="e.g., WEBCRAWLER IN C">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-8">Date</label>
+                        <input type="month" id="date-8" name="date-8">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-8">Domains</label>
+                        <input type="text" id="domains-8" name="domains-8" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-8">Tech Stack</label>
+                        <input type="text" id="tech-stack-8" name="tech-stack-8" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Finished Project 6 -->
+                <div class="p-c finished">
+                    <h3 class="project-title">Project 9</h3>
+                    <div class="form-group">
+                        <label for="app-name-9">APP NAME</label>
+                        <input type="text" id="app-name-9" name="app-name-9" placeholder="e.g., DYNAMIC MUSIC PLAYER">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-9">Date</label>
+                        <input type="month" id="date-9" name="date-9">
+                    </div>
+                    <div class="form-group">
+                        <label for="domains-9">Domains</label>
+                        <input type="text" id="domains-9" name="domains-9" placeholder="e.g., ML, Data Analytics">
+                    </div>
+                    <div class="form-group">
+                        <label for="tech-stack-9">Tech Stack</label>
+                        <input type="text" id="tech-stack-9" name="tech-stack-9" placeholder="e.g., Python, MongoDB, Scikit-learn">
+                    </div>
+                    <div class="form-group">
+                        <label>Collaborators</label>
+                        <div class="collaborators">
+                            <input type="text" placeholder="Collaborator 1">
+                            <input type="text" placeholder="Collaborator 2">
+                            <input type="text" placeholder="Collaborator 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <sp-button class="sp-button"type="submit">Save All Projects</sp-button>
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="dialog-container"></div>
+
+    <script src="../everything.js"></script>
+
+    <div class="button-wrapper">
+        <button class="save-btn" onclick="saveDetails()">Save Details</button>
+        <p class="message" id="successMessage">✅ Details saved successfully!</p>
+        <button class="back2p" id="backbutton" onclick="location.href= 'homepage.html'">Back To Profile</button>
+    </div>
+    
+</body>
+</html>

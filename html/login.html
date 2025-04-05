@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>App Login Page</title>
+</head>
+<body>
+
+    <div class="profile-card">
+
+        <div class="user-icon">👤</div>
+        <input type="text" class="input-field" placeholder="Username" required>
+        <input type="password" class="input-field" placeholder="Password" required>
+        <button onclick="redirectToProfile()" class="login-btn">Login</button>
+        <a href="signup.html">Sign Up</a>
+    </div>
+
+    <script>
+        function redirectToProfile() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codeconnect Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../css/prof.css">
+  <!-- <link rel="stylesheet" href="../css/profile.css"> -->
+</head>
+<body>
+  <div class="left-sidebar">
+    <div class="logo">Profile</div>
+    
+    <div class="nav-menu">
+      <a href="homepage.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="explorepage.html" class="nav-item">
+        <i class="fas fa-search"></i>
+        <span>Explore</span>
+      </a>
+      <a href="prof.html" class="nav-item active">
+        <i class="far fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="pcontainer">
+    <div class="main-content">
+    
+      <div class="toggle-container">
+        <div class="toggle-button" onclick="toggleContent()">
+            <div class="slider"></div>
+            <div class="toggle-option" id="user-info-tab">User Info</div>
+            <div class="toggle-option" id="projects-tab">Projects</div>
+        </div>
+      </div>
+      <div class="edit">
+        <p>
+          <a href="editp.html">Edit Profile</a>
+        </p>
+      </div>
+
+      <!-- User Section -->
+      <div id="user-info" class="content active">
+        <div class="profile-container">
+          <div class="profile-header">
+              <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+              <div>
+                  <h1 class="profile-name">Arjun</h1>
+                  <span class="availability">Available</span>
+              </div>
+              <div class="profile-since">
+                  User Since: 2025
+              </div>
+          </div>
+  
+          <div class="profile-info">
+              <div class="left-column">
+                  <div class="info-section">
+                      <h2 class="section-title">Personal</h2>
+                      <div class="info-content">
+                          <p><strong>Age:</strong> 28</p>
+                          <p><strong>Gender:</strong> Male</p>
+                          <p><strong>Contact:</strong> 7291842461</p>
+                          <p><strong>Email:</strong> arjun@randomail.com</p>
+                          <p><strong>Location:</strong> Hyderabad</p>
+                      </div>
+                  </div>
+  
+                  <div class="info-section">
+                      <h2 class="section-title">Education</h2>
+                      <div class="info-content">
+                          <p>10th Global Edge International School</p>
+                          <p>12th Lotus International School</p>
+                          <p>M.S. Computer Science, Stanford University</p>
+                          <p>B.S. Software Engineering, MIT</p>
+                      </div>
+                  </div>
+  
+                  <div class="info-section">
+                      <h2 class="section-title">Work</h2>
+                      <div class="info-content">
+                          <p>Paid Internship at TSC (2018-2019)</p>
+                          <p>Software Developer at CodeSolutions (2019-2022)</p>
+                          <p>Senior Software Engineer at TechCorp (2022-Present)</p>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="right-column">
+                  <div class="info-section">
+                      <h2 class="section-title">Role & Expertise</h2>
+                      <div class="info-content">
+                          <p><strong>Primary Role:</strong> Full Stack Developer</p>
+                          <p><strong>Domain Expertise:</strong> Web Development, AI/ML Applications</p>
+                      </div>
+                  </div>
+  
+                  <div class="info-section">
+                      <h2 class="section-title">Technical Skills</h2>
+                      <div class="info-content">
+                          <div class="skills-list">
+                              <span class="skill-tag">JavaScript</span>
+                              <span class="skill-tag">Python</span>
+                              <span class="skill-tag">React</span>
+                              <span class="skill-tag">Node.js</span>
+                              <span class="skill-tag">Docker</span>
+                              <span class="skill-tag">AWS</span>
+                              <span class="skill-tag">TensorFlow</span>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="info-section">
+                      <h2 class="section-title">Certifications</h2>
+                      <div class="info-content">
+                          <p>AWS Certified Solutions Architect</p>
+                          <p>Google Cloud Professional Developer</p>
+                          <p>TensorFlow Developer Certificate</p>
+                      </div>
+                  </div>
+  
+                  <div class="info-section">
+                      <h2 class="section-title">Collaboration Preference</h2>
+                      <div class="info-content">
+                          <p>Remote Work</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <nav>
+          <ul>
+              <li><div><b><a href="https://github.com/CursedFyre">Github</a></b></div></li>
+              <li><div><b><a href="https://leetcode.com/u/CursedFyre/">Leetcode</a></b></div></li>
+              <li><div><b><a href="https://www.linkedin.com/in/kaushik-iyer-97a4ba289">LinkedIn</a></b></div></li>
+          </ul>
+      </nav>
+      </div>
+      
+      <!-- Projects Section -->
+      <div id="projects" class="content">
+        <div class="prjs">
+            <div class="ongoingp">
+                <div class="column">
+                    <p style="color: #be3b8b;">ONGOING PROJECTS</p>
+                    <div class="pr trigger"><p>CODECONNECT</p>
+                    </div>
+                    <div class="pr trigger"><p>STOCK DISTRIBUTION SYSTEM</p>
+                    </div>
+                    <div class="pr trigger"><p>ROCK PAPER SCISSOR BRAWL</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="finishedp">
+                <div class="column">
+                    <p style="color: #be3b8b ;">FINISHED PROJECTS</p>
+                    <div class="pr trigger"><p>SOCIAL MEDIA SITE</p>
+                    </div>
+                    <div class="pr trigger"><p>AI BRAINTUMOR DETECTION MODEL</p>
+                    </div>
+                    <div class="pr trigger"><p>E-COMMERCE SITE</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p style="color: rgba(240, 248, 255, 0);">FINISHED PROJECTS</p>
+                    <div class="pr trigger"><p>FOOD DELIVERY SYSTEM</p>
+                    </div>
+                    <div class="pr trigger"><p>WEBCRAWLER IN C</p>
+                    </div>
+                    <div class="pr trigger"><p>DYNAMIC MUSIC PLAYER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div id="dialog-container"></div>
+    </div>
+
+  </div>
+
+  <script src="../everything.js"></script>
+  
+</body>
+</html>
