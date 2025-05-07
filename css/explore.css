@@ -1,0 +1,950 @@
+/* basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    overflow: hidden;
+    /* gap: 10%;      */
+
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+/* container and main */
+
+.econtainer {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-self: center;
+    /* gap: 13%; */
+    background-color: #b01173;
+}
+
+.main-content {
+    justify-self: center;
+    justify-content: center;
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #121212;
+    max-width: 100%;
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #b01173 #1e1e1e;              /* 👈 */
+}
+
+/* external scrollbar if you need it, but lowk do this one ☝️
+
+.main-content::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #b01173;
+    border-radius: 20px;
+} */
+
+
+
+/* LEFT SIDEBAR Navigation menu */
+
+.left-sidebar {
+    width: 15%;
+    background-color: #121212;
+    padding: 20px;
+    border-right: 1px solid #2a2a2a;
+    justify-self: left;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+/* ____page */
+.logo { 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    margin-top: 30px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.nav-menu a.active {
+    color:#b01173; /* Color for the active nav-item */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #2a2a2a;
+}
+
+.nav-item.active {
+    background-color: #2a2a2a;
+    font-weight: bold;
+    color: #b01173;
+}
+
+.nav-item i {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FILTER SECTION
+(left side explore page) */
+
+.filters{
+    flex: 1;
+    background-color: #121212;
+    border-right: solid #2a2a2a ;
+    /* overflow-y: auto; */
+    height: 100vh;
+}
+
+/* filter header thingy */
+.fwrap{
+    background-color: #be3b8c63;
+    width: 80%;
+    margin-left: 20%;
+    
+}
+.fheader{
+    z-index: 20;
+    margin-top: 5%;
+    margin-left: -15%;
+    /* margin-left: 5%; */
+    height: 5%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    border: solid #b01173;
+    /* border-color: #b01173; */
+    color: #be3b8b;
+    font-size: larger;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+.filter-list {
+    margin-left: 5%;
+    margin-top: 7%;
+    gap: 5%;
+    max-height: 90%; /*Set a maximum height*/
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 5%; /* Add padding to prevent content from touching the scrollbar */
+}
+
+.filter-list::-webkit-scrollbar {
+    width: 6px;
+    /* height: fit-content;  maybe comment this */
+}
+  
+.filter-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.filter-item{
+    padding: 20px;
+    position: relative; /* Ensure dropdown aligns properly */
+    overflow: visible;
+}
+
+.filter-item p{
+    font-size:large;
+    padding: 5px;
+}
+
+.filter-item input{
+    width: 95%;
+    z-index: 50;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Selected Items Display */
+.selected-items {
+    margin-top: 10px;
+    padding: 10px;
+    background: #3a3a3a;
+    border-radius: 5px;
+    min-height: 30px;
+    margin-right: 5%;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* Button Styling */
+.dropdown-btn {
+    background-color: #b01173;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    
+
+}
+
+.dropdown-content {
+    z-index: 100;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: #1e1e1e;
+    box-shadow: 0 8px 12px #4a4a4a;
+
+    width: 180%;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); */
+    padding: 5px;
+}
+
+.dropdown-input {
+    font-size: 12px;
+    background-color: #999;
+    width: calc(100% - 10px);
+    padding: 6px;
+    margin: 5px;
+    border: 5px solid #ccc;
+    /* border-radius: 4px; */
+
+}
+
+/* FIXED alignment */
+.dropdown-content label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    width: fit-content;
+}
+
+/* Reset checkbox styling */
+.dropdown-content input[type="checkbox"] {
+    all: unset;
+    appearance: checkbox;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.dropdown-content label:hover {
+    background-color: #be3b8b;
+}
+
+/* Show Dropdown */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NOT FILTER SECTION
+right side explore page */
+
+.not-filters{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+}
+
+/* saerch thing at the top/
+   still doesnt work */
+.search-container{
+    flex: 1;
+    justify-self: center;
+    justify-items: center;
+    margin-top: 3%;
+    border-bottom: solid #3a3a3a;
+    max-height: 7.5vh;
+    /* margin-bottom: 2vh; */
+}
+
+.s{
+    position: relative;
+    height: 45px;
+    width: 70%;
+
+}
+
+.s input{
+    width: 100%;
+    /* z-index: 50; */
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px; 
+    color: #fff;
+    font-size: 20px;
+}
+
+.s i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* includes the toggle and search button plus the results too*/
+.results{
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+}
+
+/* results header thingy */
+.rwrap{
+    margin-top: 2vh;
+    background-color: #be3b8c63;
+    width: 100%;
+    margin-left: 10vh;
+    
+}
+.rheader {
+    margin-left: -7%;
+    margin-right: 5%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    border: solid #b01173;
+    color: #be3b8b;
+    font-size: larger;
+    padding: 8px 15px;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+
+/* wraps toggle and search button */
+.random-wrapper {
+    margin-top: -5%;
+    flex: 1;
+    display: flex;
+    align-items: center; /* Add this to align items vertically */
+    /* padding: 10px; */
+    /* margin-bottom: 20px; */
+}
+
+/* literally mt */
+.mtdiv{
+    flex:1;
+}
+
+/* Toggle Button related */
+.toggle-container {
+    flex:1;
+    margin-left: 17.5%;
+    margin-right: 20%; /* This pushes the search button to the right */
+}
+
+.toggle-button {
+    background: #222;
+    border-radius: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-option {
+    flex: 1;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: bold;
+    color: #bbb;
+    z-index: 2;
+}
+
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #b01173;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+/* search button related */
+.sbuttonw {
+    flex:1;
+    margin-left: 20px;
+}
+
+.searchb {
+    color: #fff;
+    font-size: larger;
+    background-color: #b01173;
+    padding: 8px 15px;
+    border: solid #b01173;
+    border-radius: 5px;
+
+    /* border-radius: 30px; */
+}
+
+.searchb:hover {
+    background-color: #d81b8c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* here only the results appear */
+.actual-results{
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 3;
+    overflow-y: auto; 
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #b01173 #1e1e1e;
+
+
+    
+
+}
+
+.actual-results div{
+    flex:1;
+    width: 100%;
+    color: #121212;
+}
+
+.actual-results::-webkit-scrollbar {
+    width: 6px;
+}
+  
+.actual-results::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+  
+.actual-results::-webkit-scrollbar-thumb {
+    background-color: #b01173;
+    border-radius: 20px;
+}
+
+
+/* actual results show */
+
+.other{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* shinjuku-showdown-placeholder */
+/* just the container inside actual-results that 
+display the profiles from resultset in user grids */
+
+.goatjo{
+    
+    /* background-color: aquamarine; */
+    background-color: #121212;
+
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+/* .goatjo p{
+    margin-bottom: 5%;
+    font-weight: bolder;
+    justify-self: center;
+} */
+
+.fraudkuna{
+    width: 100%;
+    /* background-color: darkred; */
+    background-color: #121212;
+
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* .fraudkuna p{
+    margin-top: 20%;    
+    font-weight: bolder;
+    justify-self: center;
+} */
+
+
+/* Hide both content sections by default */
+#precision-content, #similar-content {
+    display: none;
+}
+
+/* Only show active content */
+#precision-content.active, #similar-content.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* grid llayout for both goatjo and fraudkuna*/
+.user-grid {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100vh; /* or fixed height depending on your layout */
+    gap: 5%;
+    padding: 2rem;
+  }
+
+  /* card for each user in the grid */
+.user-card {
+background-color: #2e2e2e;
+/* color: white; */
+/* border: 1px solid #b01173; */
+border-radius: 12px;
+padding: 1rem;
+text-align: center;
+cursor: pointer;
+box-shadow: 0 4px 10px #5a5a5a;
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+background-color: #2a2a2a; /* Darker background to match your site theme */
+
+color: #fff !important;
+font-size: 200%;
+  }
+
+/* majik */
+/* i would be called a witch and hanged in salem lowk */
+.user-card:hover {
+transform: scale(1.05);
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+background-color: #3a3a3a;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal RAH TAH TAH TAH Styling */
+
+.modal.hidden {
+display: none;
+  }
+
+.close {
+position: absolute;
+/* 
+cursor: pointer;
+color: #b01173; */
+font-weight: bold; 
+top: 1rem;
+right: 1.5rem;
+font-size: 24px;
+width: 10%;
+
+background: #ff4757;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+    margin-bottom: 5px;
+  }
+  
+#modal-title {
+color: #fff;
+margin-bottom: 1rem;
+  }
+
+#modal-text {
+color: #ccc;
+  }
+
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+  }
+
+.modal-content {
+position: relative;
+background-color: #2a2a2a;
+color: white;
+padding: 2rem;
+border-radius: 10px;
+/* min-width: 300px;
+max-width: 500px; */
+width: 40%;
+/* height: 50vh; */
+height: fit-content;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+text-align: center;
+border: 1px solid #b01173;
+z-index: 1001;
+justify-content: left;
+/* justify-items: left ; */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* in the modal the mighty modal, the lion sleeps tonight */
+.profile-header {
+display: flex;
+min-width: 100%;
+justify-content: left;
+align-items: left;
+/* margin-bottom: 30%; */
+/* border-bottom: 2px solid #333; */
+padding-bottom: 15px;
+  }
+
+.profile-pic {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border: 3px solid #555;
+border-radius: 5px;
+/* margin-right: 20px; */
+justify-self: left;
+  }
+
+/* .profile-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.availability {
+    color: #1db954;
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+} */
+
+.profile-since {
+    margin-left: auto;
+    text-align: right;
+    justify-self: right;
+    color: #888;
+    padding: 5px;
+  }
+
+
+.anotherwrapper {
+    margin-left: auto;
+    text-align: right;
+    justify-self: right;
+    /* color: #888; */
+    padding: 5px;   
+}
+
+.profile-info {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+.info-section {
+    margin-bottom: 30px;
+    justify-content: left;
+    word-break: break-word;
+  }
+
+.info-section p{
+    justify-self: left;
+    margin-bottom: 5px;
+  }
+
+.section-title {
+    color: #b01173;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+  }
+
+.info-content {
+    line-height: 1.6;
+  }
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+  }
+
+.skill-tag {
+    background: #be3b8b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+
+  }
+
+.skill-tag:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+/* it was a recommendation bro idk */
+@media (max-width: 768px) {
+    .profile-info {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+.connectwalabutton{
+    height: 5vh;
+    width: 7vw;
+    margin-top: 5%;
+    background: #be3b8b;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: -10%;
+}
+
+
+.connectwalabutton:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+
+  .connected {
+    background: #4CAF50; /* green */
+    color: white;
+    transform: scale(1.05);
+  }
